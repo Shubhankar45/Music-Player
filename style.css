@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+/* Reset some default browser styles */
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #000000;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav .brand {
+    display: flex;
+    align-items: center;
+}
+
+nav .brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav .subContainer {
+    display: flex;
+    align-items: right;
+}
+
+nav .subContainer li {
+    margin-left: 20px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+nav .subContainer li:hover {
+    text-decoration: underline;
+    color: #1db954;
+}
+
+.container {
+    padding: 20px;
+    
+}
+.container h1{
+    text-align: center;
+}
+
+.songList {
+    margin-top: 20px;
+}
+
+.songList h1 {
+    margin-bottom: 20px;
+    color: #1db954;
+}
+
+.songItemContainer {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.songItem {
+    background-color: #282828;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    width: calc(50% - 40px);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    height: 100%;
+}
+
+.songItem:hover {
+    background-color: #1db954;
+}
+
+.songItem img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.songItem .songName {
+    flex: 1;
+}
+
+.songlistplay {
+    display: flex;
+    align-items: center;
+}
+
+.songlistplay .timestamp {
+    margin-right: 10px;
+}
+
+.songlistplay .fa-play-circle {
+    cursor: pointer;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.songlistplay .fa-play-circle:hover {
+    color: #1db954;
+}
+
+.songBanner {
+    height: 200px;
+    background-color: #282828;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.bottom {
+    background-color: #181818;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: none;
+    border-radius: 5px;
+    outline: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.bottom input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #1db954;
+    border-radius: 5px;
+}
+
+.bottom input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #1db954;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #1db954;
+    cursor: pointer;
+    margin-top: -5px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.bottom input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: #1db954;
+    border-radius: 5px;
+}
+
+.bottom input[type="range"]::-moz-range-thumb {
+    border: 1px solid #1db954;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #1db954;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.bottom .icons {
+    display: flex;
+    align-items: center;
+}
+
+.bottom .icons i {
+    color: #ffffff;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.bottom .icons i:hover {
+    color: #1db954;
+}
+
+.bottom .songInfo {
+    display: flex;
+    align-items: center;
+}
+
+.bottom .songInfo img {
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .songItem {
+        width: calc(100% - 40px);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav .subContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bottom input[type="range"] {
+        width: 40%;
+    }
+}
